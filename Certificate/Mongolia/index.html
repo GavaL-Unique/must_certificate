@@ -128,9 +128,15 @@
 
   <script>
     const params = new URLSearchParams(window.location.search);
+    const formatDate = (dateObj) => {
+      const year = dateObj.getFullYear();
+      const month = String(dateObj.getMonth() + 1).padStart(2, "0");
+      const day = String(dateObj.getDate()).padStart(2, "0");
+      return `${year}-${month}-${day}`;
+    };
 
     const defaults = {
-      date: "2025-04-07",
+      date: formatDate(new Date()),
       city: "Улаанбаатар хот",
       schoolName: "Барилга, Архитектурын сургууль",
       parentName: "ТӨМӨРБАТ",
