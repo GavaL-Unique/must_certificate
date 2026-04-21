@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/Certificate/Mongolia",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/Certificate/Mongolia/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
